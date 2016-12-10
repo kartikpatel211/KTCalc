@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.collectionView(UICollectionView, numberOfItemsInSection : Int) -&gt; Int:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrCalcButtons.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLayoutSubviews() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lblWidth">
+            </PersistentString>
+            <PersistentString
+               value = "cvWidth">
+            </PersistentString>
+            <PersistentString
+               value = "cvHeight">
+            </PersistentString>
+            <PersistentString
+               value = "lblHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+            <PersistentString
+               value = "arrCalcButtons[indexPath.item]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidAppear(Bool) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lblWidth">
+            </PersistentString>
+            <PersistentString
+               value = "cvWidth">
+            </PersistentString>
+            <PersistentString
+               value = "cvHeight">
+            </PersistentString>
+            <PersistentString
+               value = "lblHeight">
+            </PersistentString>
+            <PersistentString
+               value = "cvWidth / Double(sections)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

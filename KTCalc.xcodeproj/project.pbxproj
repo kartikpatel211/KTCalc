@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66CF81A41DFA703400564F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF81A31DFA703400564F3E /* AppDelegate.swift */; };
+		66CF81A61DFA703400564F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF81A51DFA703400564F3E /* ViewController.swift */; };
+		66CF81A91DFA703400564F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF81A71DFA703400564F3E /* Main.storyboard */; };
+		66CF81AB1DFA703400564F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF81AA1DFA703400564F3E /* Assets.xcassets */; };
+		66CF81AE1DFA703400564F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF81AC1DFA703400564F3E /* LaunchScreen.storyboard */; };
+		66CF81B91DFA703400564F3E /* KTCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF81B81DFA703400564F3E /* KTCalcTests.swift */; };
+		66CF81C41DFA703400564F3E /* KTCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF81C31DFA703400564F3E /* KTCalcUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66CF81B51DFA703400564F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CF81981DFA703200564F3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66CF819F1DFA703200564F3E;
+			remoteInfo = KTCalc;
+		};
+		66CF81C01DFA703400564F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CF81981DFA703200564F3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66CF819F1DFA703200564F3E;
+			remoteInfo = KTCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66CF81A01DFA703400564F3E /* KTCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CF81A31DFA703400564F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66CF81A51DFA703400564F3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66CF81A81DFA703400564F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66CF81AA1DFA703400564F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66CF81AD1DFA703400564F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66CF81AF1DFA703400564F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66CF81B41DFA703400564F3E /* KTCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CF81B81DFA703400564F3E /* KTCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTCalcTests.swift; sourceTree = "<group>"; };
+		66CF81BA1DFA703400564F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66CF81BF1DFA703400564F3E /* KTCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CF81C31DFA703400564F3E /* KTCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTCalcUITests.swift; sourceTree = "<group>"; };
+		66CF81C51DFA703400564F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66CF819D1DFA703200564F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81B11DFA703400564F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81BC1DFA703400564F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66CF81971DFA703200564F3E = {
+			isa = PBXGroup;
+			children = (
+				66CF81A21DFA703400564F3E /* KTCalc */,
+				66CF81B71DFA703400564F3E /* KTCalcTests */,
+				66CF81C21DFA703400564F3E /* KTCalcUITests */,
+				66CF81A11DFA703400564F3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66CF81A11DFA703400564F3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66CF81A01DFA703400564F3E /* KTCalc.app */,
+				66CF81B41DFA703400564F3E /* KTCalcTests.xctest */,
+				66CF81BF1DFA703400564F3E /* KTCalcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66CF81A21DFA703400564F3E /* KTCalc */ = {
+			isa = PBXGroup;
+			children = (
+				66CF81A31DFA703400564F3E /* AppDelegate.swift */,
+				66CF81A51DFA703400564F3E /* ViewController.swift */,
+				66CF81A71DFA703400564F3E /* Main.storyboard */,
+				66CF81AA1DFA703400564F3E /* Assets.xcassets */,
+				66CF81AC1DFA703400564F3E /* LaunchScreen.storyboard */,
+				66CF81AF1DFA703400564F3E /* Info.plist */,
+			);
+			path = KTCalc;
+			sourceTree = "<group>";
+		};
+		66CF81B71DFA703400564F3E /* KTCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				66CF81B81DFA703400564F3E /* KTCalcTests.swift */,
+				66CF81BA1DFA703400564F3E /* Info.plist */,
+			);
+			path = KTCalcTests;
+			sourceTree = "<group>";
+		};
+		66CF81C21DFA703400564F3E /* KTCalcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66CF81C31DFA703400564F3E /* KTCalcUITests.swift */,
+				66CF81C51DFA703400564F3E /* Info.plist */,
+			);
+			path = KTCalcUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66CF819F1DFA703200564F3E /* KTCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66CF81C81DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalc" */;
+			buildPhases = (
+				66CF819C1DFA703200564F3E /* Sources */,
+				66CF819D1DFA703200564F3E /* Frameworks */,
+				66CF819E1DFA703200564F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTCalc;
+			productName = KTCalc;
+			productReference = 66CF81A01DFA703400564F3E /* KTCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66CF81B31DFA703400564F3E /* KTCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66CF81CB1DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalcTests" */;
+			buildPhases = (
+				66CF81B01DFA703400564F3E /* Sources */,
+				66CF81B11DFA703400564F3E /* Frameworks */,
+				66CF81B21DFA703400564F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66CF81B61DFA703400564F3E /* PBXTargetDependency */,
+			);
+			name = KTCalcTests;
+			productName = KTCalcTests;
+			productReference = 66CF81B41DFA703400564F3E /* KTCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66CF81BE1DFA703400564F3E /* KTCalcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66CF81CE1DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalcUITests" */;
+			buildPhases = (
+				66CF81BB1DFA703400564F3E /* Sources */,
+				66CF81BC1DFA703400564F3E /* Frameworks */,
+				66CF81BD1DFA703400564F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66CF81C11DFA703400564F3E /* PBXTargetDependency */,
+			);
+			name = KTCalcUITests;
+			productName = KTCalcUITests;
+			productReference = 66CF81BF1DFA703400564F3E /* KTCalcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66CF81981DFA703200564F3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Kartik Patel";
+				TargetAttributes = {
+					66CF819F1DFA703200564F3E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KP9ST78F2Z;
+						ProvisioningStyle = Automatic;
+					};
+					66CF81B31DFA703400564F3E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KP9ST78F2Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66CF819F1DFA703200564F3E;
+					};
+					66CF81BE1DFA703400564F3E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KP9ST78F2Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66CF819F1DFA703200564F3E;
+					};
+				};
+			};
+			buildConfigurationList = 66CF819B1DFA703200564F3E /* Build configuration list for PBXProject "KTCalc" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66CF81971DFA703200564F3E;
+			productRefGroup = 66CF81A11DFA703400564F3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66CF819F1DFA703200564F3E /* KTCalc */,
+				66CF81B31DFA703400564F3E /* KTCalcTests */,
+				66CF81BE1DFA703400564F3E /* KTCalcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66CF819E1DFA703200564F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CF81AE1DFA703400564F3E /* LaunchScreen.storyboard in Resources */,
+				66CF81AB1DFA703400564F3E /* Assets.xcassets in Resources */,
+				66CF81A91DFA703400564F3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81B21DFA703400564F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81BD1DFA703400564F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66CF819C1DFA703200564F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CF81A61DFA703400564F3E /* ViewController.swift in Sources */,
+				66CF81A41DFA703400564F3E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81B01DFA703400564F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CF81B91DFA703400564F3E /* KTCalcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CF81BB1DFA703400564F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CF81C41DFA703400564F3E /* KTCalcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66CF81B61DFA703400564F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66CF819F1DFA703200564F3E /* KTCalc */;
+			targetProxy = 66CF81B51DFA703400564F3E /* PBXContainerItemProxy */;
+		};
+		66CF81C11DFA703400564F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66CF819F1DFA703200564F3E /* KTCalc */;
+			targetProxy = 66CF81C01DFA703400564F3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66CF81A71DFA703400564F3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66CF81A81DFA703400564F3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66CF81AC1DFA703400564F3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66CF81AD1DFA703400564F3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66CF81C61DFA703400564F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66CF81C71DFA703400564F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66CF81C91DFA703400564F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66CF81CA1DFA703400564F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66CF81CC1DFA703400564F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTCalc.app/KTCalc";
+			};
+			name = Debug;
+		};
+		66CF81CD1DFA703400564F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTCalc.app/KTCalc";
+			};
+			name = Release;
+		};
+		66CF81CF1DFA703400564F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KTCalc;
+			};
+			name = Debug;
+		};
+		66CF81D01DFA703400564F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kartikpatel_211@yahoo.com (WQXF2S7BYB)";
+				DEVELOPMENT_TEAM = KP9ST78F2Z;
+				INFOPLIST_FILE = KTCalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktpatel.KTCalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KTCalc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66CF819B1DFA703200564F3E /* Build configuration list for PBXProject "KTCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CF81C61DFA703400564F3E /* Debug */,
+				66CF81C71DFA703400564F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66CF81C81DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CF81C91DFA703400564F3E /* Debug */,
+				66CF81CA1DFA703400564F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66CF81CB1DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CF81CC1DFA703400564F3E /* Debug */,
+				66CF81CD1DFA703400564F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66CF81CE1DFA703400564F3E /* Build configuration list for PBXNativeTarget "KTCalcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CF81CF1DFA703400564F3E /* Debug */,
+				66CF81D01DFA703400564F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66CF81981DFA703200564F3E /* Project object */;
+}
