@@ -11,13 +11,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():ViewController.swift">
+         contextName = "ViewController.viewDidAppear(Bool) -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.item">
+               value = "lblWidth">
             </PersistentString>
             <PersistentString
-               value = "indexPath.section">
+               value = "cvWidth">
+            </PersistentString>
+            <PersistentString
+               value = "cvHeight">
+            </PersistentString>
+            <PersistentString
+               value = "lblHeight">
+            </PersistentString>
+            <PersistentString
+               value = "cvWidth / Double(sections)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -39,33 +48,30 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:ViewController.swift">
+         contextName = "ViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "indexPath.item">
             </PersistentString>
             <PersistentString
-               value = "arrCalcButtons[indexPath.item]">
+               value = "indexPath.section">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.viewDidAppear(Bool) -&gt; ():ViewController.swift">
+         contextName = "ViewController.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "lblWidth">
+               value = "cell.intrinsicContentSize">
             </PersistentString>
             <PersistentString
-               value = "cvWidth">
+               value = "cell.contentView">
             </PersistentString>
             <PersistentString
-               value = "cvHeight">
+               value = "indexPath.item">
             </PersistentString>
             <PersistentString
-               value = "lblHeight">
-            </PersistentString>
-            <PersistentString
-               value = "cvWidth / Double(sections)">
+               value = "arrCalcButtons[indexPath.item]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
