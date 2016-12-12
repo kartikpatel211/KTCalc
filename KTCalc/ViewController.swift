@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var val1 = "0"
     var val2 = "0"
@@ -17,27 +17,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var cellReusableIdentifier = "cell"
     
     var sections = 5
-    var rows = 4
+    var columns = 4
+    let sectionInsets = UIEdgeInsets(top: 2.0, left: 2.0, bottom: 2.0, right: 2.0)
     
     @IBOutlet weak var txtCalcVal: UITextField!
     @IBOutlet weak var cvCalc: UICollectionView!
     
-    var cvHeight = 0.0
-    var cvWidth = 0.0
     var lblHeight = 0.0
-    var lblWidth = 0.0
     
-    var arrCalcButtons = ["AC", "+-", "%", "/", "7", "8", "9", "*", "4", "5", "6", "-", "1", "2", "3", "+", "0", ".", "=", "_"]
+    
+    var arrCalcButtons = ["AC", "C", "%", "/", "7", "8", "9", "*", "4", "5", "6", "-", "1", "2", "3", "+", "0", ".", "+-", "="]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        cvHeight = Double(cvCalc.contentSize.height)
-        cvWidth = Double(cvCalc.contentSize.width)
-        
-        lblHeight = cvHeight / Double(rows)
-        lblWidth = cvWidth / Double(sections)
+        self.cvCalc.reloadData()
     }
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int{
@@ -46,25 +39,43 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("section: \(section) - numberOfItemsInSection: \(rows)")
-        return rows
+        print("section: \(section) - numberOfItemsInSection: \(columns)")
+        return columns
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReusableIdentifier, for: indexPath)
         
-        let lbl = UILabel(frame: CGRect.init(x: 0, y: 0, width: 50, height: 50))
-        lbl.text = arrCalcButtons[(indexPath.section * rows) + indexPath.row]
+        let lbl = UILabel(frame: CGRect.init(x: 0 , y: 0, width:  lblHeight, height: lblHeight))
+        lbl.text = arrCalcButtons[(indexPath.section * columns) + indexPath.row]
+        lbl.textAlignment = .center
         print("indexPath - section - row: \(indexPath.section),\(indexPath.row) val: \(lbl.text)")
+        
         cell.addSubview(lbl)
         return cell
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        txtCalc = arrCalcButtons[(indexPath.section * rows) + indexPath.row]
+        txtCalc = arrCalcButtons[(indexPath.section * columns) + indexPath.row]
         print(txtCalc)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * CGFloat(columns + 1)
+        let availableWidth = collectionView.frame.width - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(columns)
+        lblHeight = Double(widthPerItem)
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
     
     func calcResult(val1: String, oper : String, val2 : String)-> String{
         var res = ""
