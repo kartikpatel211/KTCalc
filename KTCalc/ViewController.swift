@@ -6,6 +6,11 @@
 //  Copyright © 2016 Kartik Patel. All rights reserved.
 //
 
+
+
+/*
+ need to update logic for consicutive operationj without pressing equal key
+ */
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -13,12 +18,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var val1 = "0"
     var val2 = "0"
     var oper = ""
-    var txtCalc = "0"
     var cellReusableIdentifier = "cell"
     
     var sections = 5
     var columns = 4
     let sectionInsets = UIEdgeInsets(top: 2.0, left: 2.0, bottom: 2.0, right: 2.0)
+    var lastKey = ""
+    
     
     @IBOutlet weak var txtCalcVal: UITextField!
     @IBOutlet weak var cvCalc: UICollectionView!
@@ -37,12 +43,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print(sections)
         return sections
     }
-    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("section: \(section) - numberOfItemsInSection: \(columns)")
         return columns
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * CGFloat(columns + 1)
+        let availableWidth = collectionView.frame.width - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(columns)
+        lblHeight = Double(widthPerItem)
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReusableIdentifier, for: indexPath)
@@ -55,32 +72,48 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.addSubview(lbl)
         return cell
     }
-    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        txtCalc = arrCalcButtons[(indexPath.section * columns) + indexPath.row]
+        let txtCalc = arrCalcButtons[(indexPath.section * columns) + indexPath.row]
         print(txtCalc)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * CGFloat(columns + 1)
-        let availableWidth = collectionView.frame.width - paddingSpace
-        let widthPerItem = availableWidth / CGFloat(columns)
-        lblHeight = Double(widthPerItem)
-        return CGSize(width: widthPerItem, height: widthPerItem)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+        
+        switch txtCalc {
+        case "7", "8", "9", "4", "5", "6", "1", "2", "3", "0":
+            if ["+", "-", "*", "/", "%", "="].contains(lastKey) {
+                setResultText(result: txtCalc)
+            } else {
+                setResultText(result: txtCalcVal.text! + txtCalc)
+            }
+        case "+":
+            plus()
+        case "-":
+            minus()
+        case "*":
+            multiply()
+        case "/":
+            division()
+        case "=":
+            isEqualCalc()
+        case "+-":
+            plusMinus()
+        case ".":
+            dcimalPoint()
+        case "C":
+            clear()
+        case "AC":
+            allClear()
+        case "%":
+            percentage()
+        default:
+            break
+        }
+        
+        lastKey = txtCalc
     }
     
     func calcResult(val1: String, oper : String, val2 : String)-> String{
         var res = ""
         
-        if isIntValue(val: val1) && isIntValue(val: val2) {
+        /*if isIntValue(val: val1) && isIntValue(val: val2) {
             // perform Int Operation
             
             switch oper {
@@ -95,7 +128,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             default:
                 res = ""
             }
-        } else {
+        } else {*/
             // perform Double Operation
             
             switch oper {
@@ -108,9 +141,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             case "/":
                 res = "\( ((val1 as NSString).doubleValue) / ((val2 as NSString).doubleValue))"
             default:
-                res = ""
+                res = txtCalcVal.text!
             }
-        }
+        /*}*/
         return res
     }
     
@@ -119,42 +152,50 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func plus(){
-        val1 = txtCalc
+        val1 = txtCalcVal.text!
         oper = "+"
-        txtCalc = "0"
+        //setResultText(result: "0")
+        setResultText(result: calcResult(val1: val1, oper: oper, val2: "0"))
+        val2 = txtCalcVal.text!
     }
     func minus(){
-        val1 = txtCalc
+        val1 = txtCalcVal.text!
         oper = "-"
-        txtCalc = "0"
+        //setResultText(result: "0")
+        setResultText(result: calcResult(val1: val1, oper: oper, val2: "0"))
     }
     func multiply(){
-        val1 = txtCalc
+        val1 = txtCalcVal.text!
         oper = "*"
-        txtCalc = "0"
+        //setResultText(result: "0")
+        setResultText(result: calcResult(val1: val1, oper: oper, val2: "1"))
     }
     func division(){
-        val1 = txtCalc
+        val1 = txtCalcVal.text!
         oper = "/"
-        txtCalc = "0"
+        //setResultText(result: "0")
+        setResultText(result: calcResult(val1: val1, oper: oper, val2: "1"))
     }
     
     func isEqualCalc(){
-        val2 = txtCalc
+        val2 = txtCalcVal.text!
         
-        txtCalc = calcResult(val1: val1, oper: oper, val2: val2)
+        setResultText(result: calcResult(val1: val1, oper: oper, val2: val2))
     }
     func clear(){
+        setResultText(result: "0")
+    }
+    func allClear(){
         val1 = "0"
         val2 = "0"
         oper = ""
-        txtCalc = "0"
+        setResultText(result: "0")
     }
     func plusMinus(){
-        if isIntValue(val: txtCalc) {
-            txtCalc = "\((txtCalc as NSString).intValue * -1)"
+        if isIntValue(val: txtCalcVal.text!) {
+            setResultText(result: "\((txtCalcVal.text! as NSString).intValue * -1)")
         } else {
-            txtCalc = "\((txtCalc as NSString).doubleValue * -1)"
+            setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue * -1)")
         }
     }
     func percentage(){
@@ -163,14 +204,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             /*if isIntValue(val: txtCalc) {
              txtCalc = "\((val1 as NSString).intValue * (txtCalc as NSString).intValue / 100)"
              } else {*/
-            txtCalc = "\((val1 as NSString).doubleValue * (txtCalc as NSString).doubleValue / 100)"
+            setResultText(result: "\((val1 as NSString).doubleValue * (txtCalcVal.text! as NSString).doubleValue / 100)")
             /*}*/
         } else {
-            if isIntValue(val: txtCalc) {
-                txtCalc = "\((txtCalc as NSString).intValue / 100)"
+            if isIntValue(val: txtCalcVal.text!) {
+                setResultText(result: "\((txtCalcVal.text! as NSString).intValue / 100)")
             } else {
-                txtCalc = "\((txtCalc as NSString).doubleValue / 100)"
+                setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue / 100)")
             }
+        }
+    }
+    func dcimalPoint(){
+        if txtCalcVal.text!.contains(".") {
+            return
+        }
+        txtCalcVal.text = txtCalcVal.text! + "."
+    }
+    func setResultText(result : String){
+        if isIntValue(val: result) {
+            txtCalcVal.text = "\((result as NSString).intValue)"
+        } else {
+            txtCalcVal.text = "\((result as NSString).doubleValue)"
         }
     }
 }
