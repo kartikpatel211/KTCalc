@@ -7,10 +7,6 @@
 //
 
 
-
-/*
- need to update logic for consicutive operationj without pressing equal key
- */
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -109,78 +105,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         lastKey = txtCalc
     }
-    
-    func calcResult(val1: String, oper : String, val2 : String)-> String{
-        var res = ""
-        
-        /*if isIntValue(val: val1) && isIntValue(val: val2) {
-            // perform Int Operation
-            
-            switch oper {
-            case "+":
-                res = "\( ((val1 as NSString).intValue) + ((val2 as NSString).intValue))"
-            case "-":
-                res = "\( ((val1 as NSString).intValue) - ((val2 as NSString).intValue))"
-            case "*":
-                res = "\( ((val1 as NSString).intValue) * ((val2 as NSString).intValue))"
-            case "/":
-                res = "\( ((val1 as NSString).intValue) / ((val2 as NSString).intValue))"
-            default:
-                res = ""
-            }
-        } else {*/
-            // perform Double Operation
-            
-            switch oper {
-            case "+":
-                res = "\( ((val1 as NSString).doubleValue) + ((val2 as NSString).doubleValue))"
-            case "-":
-                res = "\( ((val1 as NSString).doubleValue) - ((val2 as NSString).doubleValue))"
-            case "*":
-                res = "\( ((val1 as NSString).doubleValue) * ((val2 as NSString).doubleValue))"
-            case "/":
-                res = "\( ((val1 as NSString).doubleValue) / ((val2 as NSString).doubleValue))"
-            default:
-                res = txtCalcVal.text!
-            }
-        /*}*/
-        return res
-    }
-    
     func isIntValue(val : String) -> Bool {
         return (val as NSString).doubleValue.truncatingRemainder(dividingBy: 1) == 0
     }
-    
     func plus(){
+        isEqualCalc() // to perform cosicutive operand operation like 1+2+3+4...
         val1 = txtCalcVal.text!
         oper = "+"
-        //setResultText(result: "0")
-        setResultText(result: calcResult(val1: val1, oper: oper, val2: "0"))
-        val2 = txtCalcVal.text!
     }
     func minus(){
+        isEqualCalc() // to perform cosicutive operand operation like 1-2-3-4...
         val1 = txtCalcVal.text!
         oper = "-"
-        //setResultText(result: "0")
-        setResultText(result: calcResult(val1: val1, oper: oper, val2: "0"))
     }
     func multiply(){
+        isEqualCalc() // to perform cosicutive operand operation like 1*2*3*4...
         val1 = txtCalcVal.text!
         oper = "*"
-        //setResultText(result: "0")
-        setResultText(result: calcResult(val1: val1, oper: oper, val2: "1"))
     }
     func division(){
+        isEqualCalc() // to perform cosicutive operand operation like 1/2/3/4...
         val1 = txtCalcVal.text!
         oper = "/"
-        //setResultText(result: "0")
-        setResultText(result: calcResult(val1: val1, oper: oper, val2: "1"))
     }
-    
     func isEqualCalc(){
         val2 = txtCalcVal.text!
-        
         setResultText(result: calcResult(val1: val1, oper: oper, val2: val2))
+    }
+    func calcResult(val1: String, oper : String, val2 : String)-> String{
+        var res = ""
+        
+        switch oper {
+        case "+":
+            res = "\( ((val1 as NSString).doubleValue) + ((val2 as NSString).doubleValue))"
+        case "-":
+            res = "\( ((val1 as NSString).doubleValue) - ((val2 as NSString).doubleValue))"
+        case "*":
+            res = "\( ((val1 as NSString).doubleValue) * ((val2 as NSString).doubleValue))"
+        case "/":
+            res = "\( ((val1 as NSString).doubleValue) / ((val2 as NSString).doubleValue))"
+        default:
+            res = txtCalcVal.text!
+        }
+        return res
     }
     func clear(){
         setResultText(result: "0")
