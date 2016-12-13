@@ -195,26 +195,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         setResultText(result: "0")
     }
     func plusMinus(){
-        if isIntValue(val: txtCalcVal.text!) {
-            setResultText(result: "\((txtCalcVal.text! as NSString).intValue * -1)")
-        } else {
-            setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue * -1)")
-        }
+        setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue * -1)")
     }
     func percentage(){
-        
-        if (val1 as NSString).intValue != 0 {
-            /*if isIntValue(val: txtCalc) {
-             txtCalc = "\((val1 as NSString).intValue * (txtCalc as NSString).intValue / 100)"
-             } else {*/
-            setResultText(result: "\((val1 as NSString).doubleValue * (txtCalcVal.text! as NSString).doubleValue / 100)")
-            /*}*/
+        if (val1 as NSString).doubleValue != 0 {
+            setResultText(result: "\((val1 as NSString).doubleValue * (txtCalcVal.text! as NSString).doubleValue / 100.0)")
         } else {
-            if isIntValue(val: txtCalcVal.text!) {
-                setResultText(result: "\((txtCalcVal.text! as NSString).intValue / 100)")
-            } else {
-                setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue / 100)")
-            }
+            setResultText(result: "\((txtCalcVal.text! as NSString).doubleValue / 100.0)")
         }
     }
     func dcimalPoint(){
