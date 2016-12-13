@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+    //var arrInputs = [String]()
+    
     var val1 = "0"
     var val2 = "0"
     var oper = ""
@@ -72,6 +74,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let txtCalc = arrCalcButtons[(indexPath.section * columns) + indexPath.row]
         print(txtCalc)
         
+        /*switch txtCalc {
+        //case "7", "8", "9", "4", "5", "6", "1", "2", "3", "0":
+            //setResultText(result: txtCalcVal.text! + txtCalc)
+        //case ".", "+-":
+            //setResultText(result: txtCalcVal.text! + txtCalc)
+        case "+", "-", "*", "/", "%":
+            arrInputs.append(txtCalcVal.text!)
+            arrInputs.append(txtCalc)
+        case "=":
+            if lastKey == "=" {
+                arrInputs.removeLast()
+            }
+            arrInputs.append(txtCalcVal.text!)
+        case "C":
+            arrInputs.removeLast()
+        case "AC":
+            arrInputs.removeAll()
+        default:
+            break
+        }*/
+        
         switch txtCalc {
         case "7", "8", "9", "4", "5", "6", "1", "2", "3", "0":
             if ["+", "-", "*", "/", "%", "="].contains(lastKey) {
@@ -80,12 +103,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 setResultText(result: txtCalcVal.text! + txtCalc)
             }
         case "+":
+            if lastKey == "+" {
+                return
+            }
             plus()
         case "-":
+            if lastKey == "-" {
+                return
+            }
             minus()
         case "*":
+            if lastKey == "*" {
+                return
+            }
             multiply()
         case "/":
+            if lastKey == "/" {
+                return
+            }
             division()
         case "=":
             isEqualCalc()
@@ -103,6 +138,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             break
         }
         
+        //print(arrInputs)
         lastKey = txtCalc
     }
     func isIntValue(val : String) -> Bool {
